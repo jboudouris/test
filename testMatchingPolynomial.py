@@ -1,8 +1,9 @@
 import math
-#did it work?????
 
 # computes the binomial coefficient
 # i.e. x choose y
+
+
 def binomial(x, y):
     a = math.factorial(x)
     b = math.factorial(y)
@@ -15,7 +16,7 @@ def binomial(x, y):
 def matchingPoly(x, y):
     answer = 0
     for i in xrange(0, x + 1):
-        a = (-1) ^ (i + 1)
+        a = int(math.pow(-1, i + 1))
         b = binomial(x, i)
         c = binomial(y, i)
         d = math.factorial(i)
@@ -25,6 +26,6 @@ def matchingPoly(x, y):
 
 
 if __name__ == '__main__':
-    m = int(input("Give an m: "))
-    n = int(raw_input("Give an n: "))
-    print matchingPoly(m, n)
+    m = input("enter an n: ")
+    n = input("enter an m: ")
+    print matchingPoly(n, m) + 1
