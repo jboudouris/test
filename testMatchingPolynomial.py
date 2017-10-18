@@ -3,7 +3,7 @@ import math
 
 # computes the binomial coefficient
 # i.e. x choose y
-def bionomialCoefficient(x, y):
+def binomial(x, y):
     a = math.factorial(x)
     b = math.factorial(y)
     c = math.factorial(x - y)
@@ -16,8 +16,8 @@ def matchingPoly(x, y):
     answer = 0
     for i in xrange(0, x + 1):
         a = (-1) ^ (i + 1)
-        b = bionomialCoefficient(x, i)
-        c = bionomialCoefficient(y, i)
+        b = binomial(x, i)
+        c = binomial(y, i)
         d = math.factorial(i)
         partialSum = a * b * c * d
         answer = answer + partialSum
