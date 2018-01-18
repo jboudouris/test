@@ -2,8 +2,6 @@ import math
 
 # computes the binomial coefficient
 # i.e. x choose y
-
-
 def binomial(x, y):
     a = math.factorial(x)
     b = math.factorial(y)
